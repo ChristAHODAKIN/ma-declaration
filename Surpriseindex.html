@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Veux-tu être mon bébé ? 💖</title>
+    <style>
+        body {
+            background: #fff;
+            color: #333;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px 20px 120px;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            color: #ff69b4;
+        }
+
+        .photos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        img {
+            width: 280px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(255,105,180,0.4);
+        }
+
+        /* ZONE BOUTONS FIXÉS EN BAS */
+        .buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+
+        .button {
+            padding: 18px 40px;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 35px;
+            border: none;
+            font-weight: bold;
+        }
+
+        #yesBtn {
+            background-color: #ff69b4;
+            color: white;
+            box-shadow: 0 8px 20px rgba(255,105,180,0.6);
+        }
+
+        #noBtn {
+            background-color: white;
+            color: #ff69b4;
+            border: 3px solid #ff69b4;
+            box-shadow: 0 8px 20px rgba(255,105,180,0.4);
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MUSIQUE DADJU - REINE -->
+    <iframe 
+        width="0" 
+        height="0" 
+        src="https://www.youtube.com/embed/YzD7U0j1BZo?autoplay=1&loop=1&playlist=YzD7U0j1BZo"
+        frameborder="0"
+        allow="autoplay">
+    </iframe>
+
+    <h1>💖 Veux-tu être mon bébé ? 💖</h1>
+
+    <div class="photos">
+        <img src="Capture d'écran 2026-02-08 181046.png" alt="Demande en mariage">
+        <img src="WhatsApp Image 2026-02-08 at 18.04.47.jpeg" alt="Ma reine">
+    </div>
+
+    <!-- BOUTONS EN BAS -->
+    <div class="buttons">
+        <button class="button" id="noBtn">NON 💗</button>
+        <button class="button" id="yesBtn">OUI 🤍</button>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById("noBtn");
+
+        noBtn.addEventListener("mouseover", () => {
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight - 100);
+            noBtn.style.position = "absolute";
+            noBtn.style.left = x + "px";
+            noBtn.style.top = y + "px";
+        });
+
+        document.getElementById("yesBtn").addEventListener("click", () => {
+            alert("💖 À partir d’aujourd’hui… tu es ma reine 💖");
+        });
+    </script>
+
+</body>
+</html>
